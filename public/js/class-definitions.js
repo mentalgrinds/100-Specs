@@ -503,6 +503,9 @@
  * @return {Bool}
  *
  */
+  function canTalkAbout (club) {
+    return club_name !== club;
+  }
 
 
 /* Step 30
@@ -527,6 +530,13 @@
  *   write
  *
  */
+  function Pen (color) {
+    this.color = color;
+  }
+
+  Pen.prototype.write = function (message) {
+    return this.color + ': ' + message;
+  };
 
 
 /* Step 31
@@ -550,6 +560,21 @@
  *   grow
  * 
  */
+  function Garden (plantsTotal) {
+    this.plantsTotal = plantsTotal;
+    this.isWatered = false;
+  }
+
+  Garden.prototype.water = function () {
+    if (!this.isWatered) {
+      this.isWatered = true;
+      this.grow();
+    }
+  };
+
+  Garden.prototype.grow = function () {
+    this.plantsTotal++;
+  };
 
 
 /* Step 32
