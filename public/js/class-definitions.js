@@ -298,6 +298,9 @@
  * @return {String}
  *
  */
+  function sahara_river () {
+    return 'Nile River';
+  }
 
 
 /* Step 21
@@ -310,6 +313,9 @@
  * @return {Number}
  *
  */
+  function addNumbers (a, b) {
+    return a + b;
+  }
 
 
 /* Step 22
@@ -323,6 +329,10 @@
  * @return {Bool}
  *
  */
+  function installLinux ( linux ) {
+    var res = linuxFlavors.indexOf(linux);
+    return res >= 0;
+  }
 
 
 /* Step 23
