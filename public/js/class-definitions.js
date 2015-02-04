@@ -739,6 +739,41 @@
  *   addDiscovery
  *   
  */
+  function Scientist (name, money, age, gender) {
+    this.disciplines = [];
+    this.discoveries = [];
+
+    Person.call(this, name, money, age, gender);
+  }
+
+  Scientist.prototype = Object.create(Person.prototype, {
+    constructor: {
+      values: Person
+    }
+  });
+
+  Scientist.prototype.addDiscipline = function (discipline) {
+    this.disciplines.push(discipline);
+    return this.disciplines;
+  };
+
+  Scientist.prototype.addDiscovery = function (discovery) {
+    this.discoveries.push(discovery);
+    var numOfDiscoveries = this.discoveries.length;
+    var resString = 'I discovered ';
+    if (numOfDiscoveries > 2) {
+      var lastElem = this.discoveries.pop();
+      resString += this.discoveries.join(', ') + ', and ' + lastElem;
+    } else {
+      resString += this.discoveries.join(' and ');
+    }
+    return resString + '.';
+  };
+
+  Scientist.prototype.checkDiscipline = function (discipline) {
+    var disciplineIdx = this.disciplines.indexOf(discipline);
+    return disciplineIdx > -1 ? true : false;
+  };
 
 
 /* Step 36
