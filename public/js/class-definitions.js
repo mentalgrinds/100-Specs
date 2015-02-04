@@ -395,6 +395,13 @@
  * @return {String}
  *
  */
+  function listLivingOrgClass () {
+    var liElements = livingOrganismClassification.map(function (elem) {
+      return '<li>' + elem + '</li>';
+    }).join('');
+
+    return '<ul>' + liElements + '</ul>';
+  }
 
 
 /* Step 26
