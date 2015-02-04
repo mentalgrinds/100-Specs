@@ -352,7 +352,19 @@
  * @return {Bool when False, String when True}
  *
  */
-
+  function drink (beer) {
+    if (beers.hasOwnProperty(beer)) {
+      var res = 'This ' + beer + ' is ';
+      if (Array.isArray(beers[beer])) {
+        res += beers[beer].join(' and ');
+      } else {
+        res += beers[beer];
+      }
+      return res + '.';
+    } else {
+      return false;
+    }
+  }
 
 /* Step 24
  *
