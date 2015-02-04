@@ -571,12 +571,16 @@
   Garden.prototype.water = function () {
     if (!this.isWatered) {
       this.isWatered = true;
-      this.grow();
     }
   };
 
   Garden.prototype.grow = function () {
-    this.plantsTotal++;
+    if (this.isWatered) {
+      this.plantsTotal++;
+      this.isWatered = false;
+    } else {
+      return false;
+    }
   };
 
 
@@ -1181,8 +1185,12 @@ var dinner = new Meal(['fish', 'vegetables']);
  * return "Driving on {streetName}", else return "Driving forward".
  *
  */
-  Vehicle.prototype.drive = function (argument) {
-    // body...
+  Vehicle.prototype.drive = function (streetName) {
+    if (streetName) {
+      return 'Driving on ' + streetName;
+    } else {
+      return 'Driving forward';
+    }
   };
 
 
