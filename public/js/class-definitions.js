@@ -423,7 +423,17 @@
  * @return {String}
  *
  */
-
+  function favoritePlanet (planet) {
+    var planetIdx = planets.indexOf(planet);
+    if (planetIdx === -1) {
+      return planet + ' is not a planet!';
+    } else {
+      var otherPlanets = planets.slice(planetIdx, planetIdx + 1);
+      var rndPlanet = planets[Math.floor(Math.random() * otherPlanets.length)];
+      return "I'm from " + planet + ', but I wish I could go to ' + rndPlanet + '.';
+    }
+    
+  }
 
 /* Step 27
  *
