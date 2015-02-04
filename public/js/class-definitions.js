@@ -1154,6 +1154,22 @@ var dinner = new Meal(['fish', 'vegetables']);
  *
  */
 
+  Animal.prototype.isWarmBlooded = function () {
+    var knownSpecies = {
+      'Fish': false,
+      'Monkey': true,
+      'Bird': true
+    };
+
+    var warmBlooded = knownSpecies[this.species];
+    if (warmBlooded === undefined) {
+      return 'Could not determine if warm-blooded';
+    } else {
+      return warmBlooded;
+    }
+
+  };
+
 
 /* Step 82
  *
@@ -1162,6 +1178,10 @@ var dinner = new Meal(['fish', 'vegetables']);
  * return "Driving on {streetName}", else return "Driving forward".
  *
  */
+  Vehicle.prototype.drive = function (argument) {
+    // body...
+  };
+
 
 
  /* Step 83
