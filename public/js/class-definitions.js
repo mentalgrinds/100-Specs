@@ -457,6 +457,20 @@
  *   earnMoney
  *
  */
+  function Person (name, moneyStr, age, gender) {
+    this.name = name;
+    this.money = parseInt(moneyStr, '10');
+    this.age = age;
+    this.gender = gender;
+  }
+
+  Person.prototype.spendMoney = function (spendAmtStr) {
+    this.money -= parseInt(spendAmtStr, '10');
+  };
+
+  Person.prototype.earnMoney = function (earnAmtStr) {
+    this.money += parseInt(earnAmtStr, '10');
+  };
 
 
 /* Step 28
