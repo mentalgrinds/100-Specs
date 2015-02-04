@@ -3,6 +3,7 @@
  * Declare a variable named "unicorn"
  *
  */
+  var unicorn = null;
 
 
 /* Step 2
