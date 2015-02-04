@@ -969,6 +969,10 @@
  * @param {string} species The animal species
  * @param {string} gender  male or female
  */
+  function Animal (species, gender) {
+    this.species = species;
+    this.gender = gender;
+  }
 
 
 /**
@@ -978,6 +982,10 @@
  * @param {string} make The vehicle's make
  * @param {string} model The vehicle's model
  */
+  function Vehicle (make, model) {
+    this.make = make;
+    this.model = model;
+  }
 
 
 /**
@@ -986,6 +994,13 @@
  * Shape class
  * @param {number} sides The number of sides, should be greater than 3
  */
+  function Shape (sides) {
+    if (sides > 3) {
+      this.sides = sides;
+    } else {
+      throw 'Error';
+    }
+  }
 
 
 /**
@@ -995,6 +1010,10 @@
  * @param {anything} contents The contents of the box
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
+  function Box (contents, opened) {
+    this.contents = contents;
+    this.isOpen = opened;
+  }
 
 
 /**
@@ -1003,6 +1022,9 @@
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
+  function Door (opened) {
+    this.isOpen = opened;
+  }
 
 
 /**
@@ -1012,6 +1034,10 @@
  * @param {number} size  The shoe size
  * @param {string} color The shoe color
  */
+  function Shoe (size, color) {
+    this.size = size;
+    this.color = color;
+  }
 
 
 /**
@@ -1020,6 +1046,9 @@
  * House class
  * @param {number} stories How many stories tall the house is
  */
+  function House (stories) {
+    this.stories = stories;
+  }
 
 
 /**
@@ -1028,6 +1057,9 @@
  * Lightbulb class
  * @param {boolean} isOn Whether the light is on or off
  */
+  function Lightbulb (isOn) {
+    this.isOn = isOn;
+  }
 
 
 /**
@@ -1036,7 +1068,9 @@
  * Cookie class
  * @param {string} flavor The cookie's flavor
  */
-
+  function Cookie (flavor) {
+    this.flavor = flavor;
+  }
 
 /**
  * Step 59
@@ -1044,12 +1078,16 @@
  * Meal class
  * @param {Array} foods All the foods in the meal
  */
+  function Meal (foods) {
+    this.foods = foods;
+  }
 
 
 /**
  * Create a new instance of the Classes you defined above, below!
  * Steps 60-80 (each variable is a 'step')
  */
+  
 
 
 // Create 2 different species of animals
