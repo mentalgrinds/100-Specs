@@ -377,7 +377,14 @@
  * @return {String}
  *
  */
-
+  function browseURL (browser) {
+    if (browsers.hasOwnProperty(browser)) {
+      return browsers[browser];
+    } else {
+      console.log(browser + ' not a known browser, please try a different browser name.');
+      return false;
+    }
+  }
 
 /* Step 25
  *
