@@ -1002,10 +1002,8 @@
  * @param {number} sides The number of sides, should be greater than 3
  */
   function Shape (sides) {
-    if (sides > 3) {
+    if (sides >= 3) {
       this.sides = sides;
-    } else {
-      throw 'Error';
     }
   }
 
@@ -1212,6 +1210,26 @@ var dinner = new Meal(['fish', 'vegetables']);
  * Any other number => "Could not determine type"
  *
  */
+  Shape.prototype.getType = function () {
+    var knownShapes = {
+      '3' : 'triangle',
+      '4' : 'quadrilateral',
+      '5' : 'pentagon',
+      '6' : 'hexagon',
+      '7' : 'heptagon',
+      '8' : 'octagon',
+      '9' : 'nonagon',
+     '10' : 'decagon'
+    };
+
+    var resultShape = knownShapes[this.sides.toString()];
+    
+    if (resultShape) {
+      return resultShape;
+    } else {
+      return 'Could not determine type';
+    }
+  };
 
 
 /* Step 84
