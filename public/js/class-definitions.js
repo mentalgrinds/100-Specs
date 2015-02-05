@@ -1240,7 +1240,14 @@ var dinner = new Meal(['fish', 'vegetables']);
  * Return true if openBox opens the box, false otherwise.
  *
  */
-
+  Box.prototype.openBox = function () {
+    if (this.isOpen) {
+      return false;
+    } else {
+      this.isOpen = true;
+      return true;
+    }
+  };
 
  /* Step 85
  *
@@ -1249,6 +1256,8 @@ var dinner = new Meal(['fish', 'vegetables']);
  * Return true if openClose opens the door, false if openClose closes the door.
  *
  */
+  
+
 
 
 /* Step 86
