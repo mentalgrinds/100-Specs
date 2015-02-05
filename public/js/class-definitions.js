@@ -1256,7 +1256,9 @@ var dinner = new Meal(['fish', 'vegetables']);
  * Return true if openClose opens the door, false if openClose closes the door.
  *
  */
-  
+  Door.prototype.openClose = function () {
+    return this.isOpen = this.isOpen ? false : true;
+  };
 
 
 
