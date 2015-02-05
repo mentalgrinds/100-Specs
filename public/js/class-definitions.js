@@ -1359,9 +1359,12 @@ var dinner = new Meal(['fish', 'vegetables']);
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
-var coldBloodedAnimal;
-var notWarmOrColdAnimal;
+  var monkey = new Animal('Monkey', 'male');
+var warmBloodedAnimal = monkey.isWarmBlooded();
+  var fish = new Animal('Fish', 'female');
+var coldBloodedAnimal = fish.isWarmBlooded();
+  var lizard = new Animal('Reptile', 'male');
+var notWarmOrColdAnimal = lizard.isWarmBlooded();
 
 
 /* Step 92
