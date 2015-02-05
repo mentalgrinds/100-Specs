@@ -1335,18 +1335,14 @@ var dinner = new Meal(['fish', 'vegetables']);
  */
   Meal.prototype.containsJunkFood = function () {
     var junkFood = ["chips","soda","ice cream","popcorn","candy"];
-    var foundJunk;
-    foundJunk = this.foods.map(function (foodItem) {
+    var foundJunk = false;
+    this.foods.map(function (foodItem) {
       var jnkFoodIdx = junkFood.indexOf(foodItem);
       if (jnkFoodIdx > -1) {
-        return foodItem;
+        foundJunk = true;
       }
     });
-    if (foundJunk.length > 0) {
-      return true;
-    } else {
-      return false;
-    }
+    return foundJunk;
   };
 
 
