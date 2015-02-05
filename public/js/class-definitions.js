@@ -1373,8 +1373,11 @@ var notWarmOrColdAnimal = lizard.isWarmBlooded();
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+  var volvo = new Vehicle('Volvo', 'V70');
+var streetDriving = volvo.drive('Liliha Street');
+
+  var kia = new Vehicle('Kia', 'Sportage');
+var forwardDriving = kia.drive();
 
 
  /* Step 93
