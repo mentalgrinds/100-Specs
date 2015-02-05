@@ -1386,8 +1386,11 @@ var forwardDriving = kia.drive();
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+ var polyTen = new Shape(10);
+var decagon = polyTen.getType();
+
+  var polyBlank = new Shape(20);
+var polygon = polyBlank.getType();
 
 
 /* Step 94
