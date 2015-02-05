@@ -1293,6 +1293,15 @@ var dinner = new Meal(['fish', 'vegetables']);
  * Return true if isOn is true, false otherwise.
  *
  */
+  Lightbulb.prototype.flipSwitch = function (on) {
+    if (on === 'on') {
+      this.isOn = true;
+      return this.isOn;
+    } else {
+      this.isOn = false;
+      return this.isOn;
+    }
+  };
 
 
  /* Step 89
@@ -1302,6 +1311,13 @@ var dinner = new Meal(['fish', 'vegetables']);
  * and the dayOfTheWeek is "Monday", return true.  Else return false.
  *
  */
+  Cookie.prototype.swipedByCookieMonster = function (dayOfTheWeek) {
+    if (this.flavor === 'chocolate' && dayOfTheWeek === 'Monday') {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
 
  /* Step 90
@@ -1317,6 +1333,21 @@ var dinner = new Meal(['fish', 'vegetables']);
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
+  Meal.prototype.containsJunkFood = function () {
+    var junkFood = ["chips","soda","ice cream","popcorn","candy"];
+    var foundJunk;
+    foundJunk = this.foods.map(function (foodItem) {
+      var jnkFoodIdx = junkFood.indexOf(foodItem);
+      if (jnkFoodIdx > -1) {
+        return foodItem;
+      }
+    });
+    if (foundJunk.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
 
  /* Steps 91 to 100
